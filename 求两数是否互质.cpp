@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main() {
 	int a=0,b=0,i=1;
-	printf("ÇëÊäÈëÊı×Öa=");
+	printf("è¯·è¾“å…¥æ•°å­—a=");
 	scanf("%d",&a);
-    printf("ÇëÊäÈëÊı×Öb=");
+    printf("è¯·è¾“å…¥æ•°å­—b=");
 	scanf("%d",&b);
 	for(i=1;i!=0;)
 	{
@@ -11,8 +11,8 @@ int main() {
 	a=b;
 	b=i;}
 	if(a==1)
-	printf("a,bÁ½Êı»¥ÖÊ"); 
+	printf("a,bä¸¤æ•°äº’è´¨"); 
 	else
-	printf("a,bÁ½Êı²»»¥ÖÊ");
+	printf("a,bä¸¤æ•°ä¸äº’è´¨");
 	return 0;
 }
