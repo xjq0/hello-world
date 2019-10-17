@@ -11,6 +11,6 @@ int main(){
 	    x=i%a;
 	    y=i%b;
 	} 
-	printf("a,b最小公倍数i=%d",i);
+	printf("a,b鏈�灏忓叕鍊嶆暟i=%d",i);
 	return 0;
 }
