@@ -1,15 +1,17 @@
-//å®ç°ä»£ç åˆ¤æ–­2ä¸ªfloatå˜é‡ç›¸ç­‰
-//è¯¯å·®ç²¾ç¡®åˆ°æ—¶å°æ•°ç‚¹å5ä½
+//ÊµÏÖ´úÂëÅĞ¶Ï2¸öfloat±äÁ¿ÏàµÈ
+//Îó²î¾«È·µ½Ê±Ğ¡Êıµãºó5Î»
 #include <stdio.h>
 int main()
 {
     float m = 1.78;
     float x = 1.779999, y = 2;
     float z = m / y, z1 = x / y;
-    if (z == z1) {
+    float n = 0;
+    n = m - x;
+    if (n<=0.000005) {
         z = (m + x) / y;
     }
-    printf("Z is %f\n", z);
+    printf("Z is %.2f\n", z);
     printf("Z1 is %f\n", z1);
     return 0;
 }
