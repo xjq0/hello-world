@@ -1,2 +1,63 @@
-//è¶…çº§ç´ æ•°ï¼šå®ƒæœ¬èº«ï¼Œå„ä½æ•°å­—çš„å’Œï¼Œå„ä½æ•°å­—çš„å¹³æ–¹å’Œï¼Œéƒ½æ˜¯ç´ æ•°ã€‚
-//æ±‚ 100~10000 å†…çš„æ‰€æœ‰è¶…çº§ç´ æ•°ï¼ŒåŠå®ƒä»¬çš„å¹³å‡æ•°ã€‚
+//³¬¼¶ËØÊý£ºËü±¾Éí£¬¸÷Î»Êý×ÖµÄºÍ£¬¸÷Î»Êý×ÖµÄÆ½·½ºÍ£¬¶¼ÊÇËØÊý¡£
+//Çó 100~10000 ÄÚµÄËùÓÐ³¬¼¶ËØÊý£¬¼°ËüÃÇµÄÆ½¾ùÊý¡£
+#include<stdio.h>
+int main(){
+    	int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,m=0,M=0,n=10001,i=100,k=0;
+    	float x=0,y=0;
+    	while(i<n&&i!=10000){
+    		m=2,k=0; 
+    		while(m<i){
+    			a=i%m;
+    			if(a==0){
+    			    k++,m++;
+    			    break;
+    			}
+				else{
+					m++;
+				}
+			}
+			if(k==0){
+				m=2;
+				c=i/1000,d=(i-c*1000)/100,e=(i-c*1000-d*100)/10,f=i%10,h=c;
+				g=c+d+e+f;
+				if(g==1){
+				    k++;
+				} 
+				else{
+            		while(m<g){
+            			a=g%m;
+            			if(a==0){
+            			    k++,m++;
+            			    break;
+                			}
+	    		    	else{
+	    		    		m++;
+	    	    		}
+    	    		}
+    	    	}
+    		}
+	    	if(k==0){
+	    		m=2,c=h;
+    			g=c*c+d*d+e*e+f*f;
+           		while(m<g){
+           			a=g%m;
+            		if(a==0){
+            		    k++,m++;
+            		    break;
+            		}
+	        		else{
+	        			m++;
+	    	    		}		
+      	    		}
+    		}
+    		if(k==0){
+    			M=M+i;
+    			b++;
+    			printf("%d\n",i);
+			}
+				i++;
+	}
+	x=(float)M,y=(float)b;
+		printf("¸öÊýÎª%d£¬ºÍÎª%d£¬Æ½¾ùÊýÎª%f",b,M,x/y);
+	return 0;
+}
